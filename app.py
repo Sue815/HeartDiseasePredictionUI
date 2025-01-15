@@ -21,10 +21,10 @@ input_columns = [
 
 # Dictionary to map numerical values to descriptive labels
 chestpain_options = {
-    0: "Low",
-    1: "Normal",
-    2: "Medium",
-    3: "High"
+    0: "Typical Angina",
+    1: "Atypical Angina",
+    2: "Non-Anginal Pain",
+    3: "Asymptomatic"
 }
 
 # Title and description
@@ -70,7 +70,7 @@ with col2:
     restingrelectro_options = {
         0: "Normal",
         1: "Having ST-T Wave Abnormality",
-        2: "Other Abnormalities"
+        2: "Left Ventricular Hypertrophy"
     }
     restingrelectro = st.selectbox(
         "Resting Electrocardiographic Results",
@@ -80,7 +80,7 @@ with col2:
 
 # Slope of the Peak Exercise ST Segment and Number of Major Vessels
 with col1:
-    slope = st.selectbox("Slope of the Peak Exercise ST Segment", [0, 1, 2])
+    slope = st.selectbox("Slope of the Peak Exercise ST Segment", [0, 1, 2, 3])
 with col2:
     noofmajorvessels = st.selectbox("Number of Major Vessels (0-3)", [0, 1, 2, 3])
 
